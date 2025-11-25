@@ -1,0 +1,7 @@
+/.pytest_cache
+/config
+/data
+/docs
+/src
+LICENSE
+README
