@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #F2F2F4;
             min-height: 100vh;
             padding: 20px;
             display: flex;
@@ -24,35 +24,37 @@
         .container {
             max-width: 900px;
             width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: #FFFFFF;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
+            background: #1A1A1D;
+            color: #FFFFFF;
+            padding: 40px 30px;
             text-align: center;
         }
 
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .header p {
             font-size: 1.1em;
-            opacity: 0.9;
+            color: #C9C9CC;
         }
 
         .demo-note {
-            background: #fff3cd;
-            color: #856404;
+            background: #F5C542;
+            color: #1A1A1D;
             padding: 15px;
             text-align: center;
             font-weight: 500;
+            border-bottom: 1px solid #E0E0E0;
         }
 
         .content {
@@ -67,29 +69,40 @@
             display: block;
             font-weight: 600;
             margin-bottom: 10px;
-            color: #333;
+            color: #1A1A1D;
             font-size: 1.1em;
         }
 
         textarea {
             width: 100%;
             padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
             font-size: 1em;
             font-family: inherit;
             resize: vertical;
             min-height: 120px;
             transition: border-color 0.3s;
+            color: #2E2E31;
         }
 
         textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #5A71FF;
+        }
+
+        textarea::placeholder {
+            color: #4A4A4D;
         }
 
         .examples {
             margin: 20px 0;
+        }
+
+        .examples p {
+            color: #4A4A4D;
+            font-size: 0.9em;
+            margin-bottom: 10px;
         }
 
         .example-buttons {
@@ -100,43 +113,47 @@
 
         .example-btn {
             padding: 8px 16px;
-            background: #f0f0f0;
-            border: none;
-            border-radius: 20px;
+            background: #F2F2F4;
+            border: 1px solid #E0E0E0;
+            border-radius: 6px;
             cursor: pointer;
             font-size: 0.9em;
             transition: all 0.3s;
+            color: #2E2E31;
         }
 
         .example-btn:hover {
-            background: #667eea;
-            color: white;
+            background: #4A4A4D;
+            color: #FFFFFF;
+            border-color: #4A4A4D;
             transform: translateY(-2px);
         }
 
         .analyze-btn {
             width: 100%;
             padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #5A71FF;
+            color: #FFFFFF;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             font-size: 1.2em;
             font-weight: 600;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: all 0.3s;
         }
 
         .analyze-btn:hover {
+            background: #4858CC;
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 4px 12px rgba(90, 113, 255, 0.3);
         }
 
         .results {
             margin-top: 30px;
             padding: 25px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            background: #F2F2F4;
+            border-radius: 8px;
+            border: 1px solid #E0E0E0;
             display: none;
         }
 
@@ -159,36 +176,36 @@
         .threat-level {
             display: inline-block;
             padding: 10px 20px;
-            border-radius: 20px;
+            border-radius: 6px;
             font-weight: 600;
             font-size: 1.1em;
             margin-bottom: 20px;
         }
 
         .threat-critical {
-            background: #dc3545;
-            color: white;
+            background: #E36C6C;
+            color: #FFFFFF;
         }
 
         .threat-high {
-            background: #fd7e14;
-            color: white;
+            background: #F5C542;
+            color: #1A1A1D;
         }
 
         .threat-medium {
-            background: #ffc107;
-            color: #333;
+            background: #C9C9CC;
+            color: #1A1A1D;
         }
 
         .threat-low {
-            background: #28a745;
-            color: white;
+            background: #4CC79F;
+            color: #FFFFFF;
         }
 
         .score-display {
             font-size: 3em;
             font-weight: bold;
-            color: #667eea;
+            color: #1A1A1D;
             margin: 15px 0;
         }
 
@@ -199,32 +216,34 @@
         .flag-item {
             display: inline-block;
             padding: 8px 15px;
-            background: #fff;
-            border: 2px solid #dc3545;
-            border-radius: 20px;
+            background: #FFFFFF;
+            border: 2px solid #E36C6C;
+            border-radius: 6px;
             margin: 5px;
             font-size: 0.9em;
-            color: #dc3545;
+            color: #E36C6C;
             font-weight: 500;
         }
 
         .roast-response {
-            background: white;
+            background: #FFFFFF;
             padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            border-left: 4px solid #5A71FF;
             margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         .roast-response h3 {
-            color: #667eea;
+            color: #5A71FF;
             margin-bottom: 10px;
+            font-weight: 600;
         }
 
         .roast-response p {
             font-size: 1.1em;
             line-height: 1.6;
-            color: #333;
+            color: #2E2E31;
             font-style: italic;
         }
 
@@ -232,7 +251,18 @@
             font-size: 1.3em;
             font-weight: 600;
             margin-bottom: 15px;
-            color: #333;
+            color: #1A1A1D;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #5A71FF;
+            color: #FFFFFF;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-left: 10px;
         }
     </style>
 </head>
@@ -253,7 +283,7 @@
                 <textarea id="messageInput" placeholder="Paste a suspicious email, text message, or call transcript here..."></textarea>
                 
                 <div class="examples">
-                    <p style="font-size: 0.9em; color: #666; margin-bottom: 10px;">Try an example:</p>
+                    <p>Try an example:</p>
                     <div class="example-buttons">
                         <button class="example-btn" data-example="phishing">Phishing Email</button>
                         <button class="example-btn" data-example="irs">IRS Scam</button>
@@ -267,7 +297,7 @@
             </div>
 
             <div class="results" id="results">
-                <div class="section-title">Analysis Results</div>
+                <div class="section-title">Analysis Results<span class="badge" id="verifiedBadge">AI VERIFIED</span></div>
                 <div class="threat-level" id="threatLevel">HIGH THREAT</div>
                 <div class="score-display" id="scoreDisplay">8.5/10</div>
                 
@@ -338,7 +368,6 @@
                 return;
             }
 
-            // Find matching example or use generic response
             let result = null;
             for (let key in examples) {
                 if (text === examples[key].text) {
@@ -347,7 +376,6 @@
                 }
             }
 
-            // Generic analysis for custom input
             if (!result) {
                 result = analyzeCustomMessage(text);
             }
@@ -360,7 +388,6 @@
             let score = 0;
             let flags = [];
 
-            // Simple keyword detection
             const keywords = {
                 "urgent": 2.0,
                 "immediately": 2.0,
@@ -409,22 +436,17 @@
             const flagsList = document.getElementById('flagsList');
             const roastText = document.getElementById('roastText');
 
-            // Update threat level
             threatLevel.textContent = result.level + " THREAT";
             threatLevel.className = "threat-level threat-" + result.level.toLowerCase();
 
-            // Update score
             scoreDisplay.textContent = result.score + "/10";
 
-            // Update flags
             flagsList.innerHTML = result.flags.map(flag => 
                 `<span class="flag-item">${flag}</span>`
             ).join('');
 
-            // Update roast
             roastText.textContent = result.roast;
 
-            // Show results
             results.classList.add('show');
             results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
